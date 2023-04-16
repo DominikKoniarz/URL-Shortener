@@ -21,6 +21,7 @@ CREATE DATABASE `url-shortener` CHARACTER SET utf8 COLLATE utf8_general_ci;
 5. Clone this repository to your PC. Open terminal and navigate to directory where a while before you copied repository files. Then run proper command (you should already have installed NodeJS):
 
 ```
+npm i
 node server.js
 ```
 
