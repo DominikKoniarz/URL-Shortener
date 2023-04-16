@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Montserrat, sans-serif;
+  color: white;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg, rgb(24, 197, 233) 0%, rgb(48, 99, 249) 85%);
+}
+main nav {
+  width: 100vw;
+  height: 90px;
+  display: grid;
+  place-items: center;
+}
+main nav h1 {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 700;
+}
+main article {
+  width: 100vw;
+  height: calc(100vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main article #form {
+  width: 400px;
+  min-height: 100px;
+  position: relative;
+  top: -90px;
+  background-color: white;
+  padding: 5px 10px 5px 10px;
+  border-radius: 15px;
+  color: black;
+  display: block;
+  transition: 300ms;
+}
+main article #form table {
+  width: 100%;
+}
+main article #form table tr td {
+  padding: 5px 0 5px 0;
+  width: 100%;
+}
+main article #form table tr td label {
+  font-size: 1.2em;
+  letter-spacing: 0.5px;
+}
+main article #form table tr td #form-url-input {
+  width: 100%;
+  border: none;
+  border: 1px solid rgb(175, 175, 175);
+  font-size: calc(1.5em - 5px);
+  border-radius: 10px;
+  padding: 6px;
+  color: rgb(1, 160, 1);
+}
+main article #form table tr td #form-url-input:focus {
+  outline: transparent;
+}
+main article #form table tr td #form-submit {
+  width: 100%;
+  font-size: 1.5em;
+  height: 38px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(1, 160, 1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 200ms;
+  display: grid;
+  place-items: center;
+}
+main article #form table tr td #form-submit #submit-text {
+  width: 100%;
+  display: block;
+}
+main article #form table tr td #form-submit #submit-loader {
+  display: none;
+}
+main article #form table tr td #form-submit #submit-loader div {
+  width: 20px;
+  height: 20px;
+  border: 3px solid white;
+  border-top: 3px solid gray;
+  border-radius: 50%;
+  animation: loader-animation 750ms linear infinite;
+}
+main article #form table tr td #form-submit:hover {
+  background-color: rgb(0, 141, 0);
+  transition: background-color 200ms;
+}
+main article #form table tr td #form-submit:active {
+  transform: scale(0.985);
+}
+main article #form table tr .error {
+  padding: 0;
+}
+main article #form table tr .error-active {
+  padding: 0 0 0px 0;
+  font-size: 12px;
+  color: red;
+}
+main article #after-submit {
+  width: 400px;
+  min-height: 100px;
+  position: relative;
+  top: -90px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 15px;
+  color: black;
+  background-color: white;
+  display: none;
+  transition: 300ms;
+}
+main article #after-submit tr td {
+  padding: 5px 0 5px 0;
+  width: 380px;
+}
+main article #after-submit tr td label {
+  font-size: 1.2em;
+  letter-spacing: 0.5px;
+}
+main article #after-submit tr td input[type=text],
+main article #after-submit tr td input[type=text]:disabled {
+  width: 100%;
+  padding: 6px;
+  font-size: calc(1.5em - 5px);
+  color: rgb(1, 160, 1);
+  border: none;
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 10px;
+  outline: transparent;
+}
+main article #after-submit tr #buttons {
+  display: flex;
+  gap: 10px;
+}
+main article #after-submit tr #buttons button {
+  height: 38px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  background-color: rgb(1, 160, 1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 200ms;
+}
+main article #after-submit tr #buttons button:hover {
+  background-color: rgb(0, 141, 0);
+  transition: background-color 200ms;
+}
+main article #after-submit tr #buttons button:active {
+  transform: scale(0.985);
+}
+main article #after-submit tr #buttons #copy-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+main article #after-submit tr #buttons #copy-button ion-icon {
+  font-size: 1.5em;
+}
+main article #after-submit tr #buttons #copy-button span {
+  font-size: 1.5em;
+}
+main article #after-submit tr #buttons #short-another {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-grow: 1;
+}
+main article #after-submit tr #buttons #short-another ion-icon {
+  font-size: 1.5em;
+}
+main article #after-submit tr #buttons #short-another span {
+  font-size: 1.5em;
+}
+
+@keyframes loader-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

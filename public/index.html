@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>URL Shortener</title>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+		<link rel="stylesheet" href="./src/css/style.min.css" />
+		<script src="./src/js/app.js" defer></script>
+	</head>
+	<body>
+		<main>
+			<nav><h1>URL SHORTENER</h1></nav>
+			<article>
+				<form id="form">
+					<table>
+						<tr>
+							<td>
+								<label for="form-url-input"
+									>Enter long URL to shorten it:</label
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input
+									type="text"
+									id="form-url-input"
+									placeholder="https://example.com"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td class="error"></td>
+						</tr>
+						<tr>
+							<td>
+								<button id="form-submit">
+									<span id="submit-text">Make it short!</span>
+									<span id="submit-loader"><div></div></span>
+								</button>
+							</td>
+						</tr>
+					</table>
+				</form>
+				<table id="after-submit">
+					<tr>
+						<td><label for="original-url">Your original URL:</label></td>
+					</tr>
+					<tr>
+						<td><input type="text" id="original-url" disabled /></td>
+					</tr>
+					<tr>
+						<td><label for="short-url">Short URL:</label></td>
+					</tr>
+					<tr>
+						<td><input type="text" id="short-url" disabled /></td>
+					</tr>
+					<tr>
+						<td id="buttons">
+							<button id="copy-button">
+								<ion-icon name="clipboard-outline"></ion-icon>
+								<span>Copy</span>
+							</button>
+							<button id="short-another">
+								<ion-icon name="reload-outline"></ion-icon>
+								<span>Shorten another</span>
+							</button>
+						</td>
+					</tr>
+				</table>
+			</article>
+		</main>
+	</body>
+</html>
