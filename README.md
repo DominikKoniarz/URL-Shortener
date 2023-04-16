@@ -9,7 +9,7 @@ URL Shortener combines these two things.
 
 # What to do to launch this project on your PC?
 
-1. First of all you have to install NodeJS (18.15.0) and XAMPP package to launch MySQL database.
+1. First of all you have to install [NodeJS](https://nodejs.org/en) (18.15.0) and XAMPP package to launch MySQL database.
 2. Open XAMPP control panel and start Apache and MySQL process. Then go to your browser and access this address: http://localhost/phpmyadmin
 3. Paste this code to MySQL terminal to create database:
 
